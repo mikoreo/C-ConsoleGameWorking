@@ -9,5 +9,5 @@ namespace C_ConsoleGame
     internal class StartRoom : Rooms
     {
         public StartRoom() : 
-    } hfhhfhf
+    } 
 }
