@@ -6,17 +6,26 @@ using System.Threading.Tasks;
 
 namespace C_ConsoleGame
 {
-    internal class Rooms
+    internal abstract class Rooms
     {
-        private string _name;
-        private string _description;
-        private bool _solvedPuzzle;
-        private int _sanity;
-        public Rooms(string Name, string Description, int Sanity)
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public bool Solved { get; protected set; } = false;
+        public Rooms(string name, string description)
         {
-            _name = Name;
-            _description = Description;
-            _sanity = Sanity;
+            Name = name;
+            Description = description;
         }
+
+        public virtual void StartKamer()
+        {
+            Console.Clear();
+            Console.WriteLine(Name);
+            Console.WriteLine(Description);
+
+            SpeelPuzzel();
+        }
+
+        protected abstract void SpeelPuzzel();
     }
 }

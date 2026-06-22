@@ -9,7 +9,7 @@ namespace C_ConsoleGame
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {hoi
         }
     }
 }
