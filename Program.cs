@@ -14,7 +14,8 @@ namespace C_ConsoleGame
             List<Rooms> mansion = new List<Rooms>
         {
             new StartRoom(),
-            new Hallway()
+            new Hallway(),
+            new PortretRoom(),
         };
 
             Console.WriteLine("Welkom bij Escape the Mansion!");

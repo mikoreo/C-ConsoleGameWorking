@@ -88,6 +88,10 @@ namespace C_ConsoleGame
                         Console.WriteLine("je kijkt rond de gang en je ziet een symbol achter een gedeelte afgebroken behang");
                         Console.WriteLine("het is een symbol van de wind");
                         break;
+                    default:
+                        Console.WriteLine("ongeldige keuze. probeer het opnieuw.");
+                        ClearConsole();
+                        break;
 
                 }
             }
