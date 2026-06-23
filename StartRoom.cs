@@ -8,6 +8,7 @@ namespace C_ConsoleGame
 {
     internal class StartRoom : Rooms
     {
+        //Bools om de voortgang in de kamer bij te houden
         private bool _readBook = false;
         private bool _hasKey = false;
         
@@ -20,6 +21,7 @@ namespace C_ConsoleGame
             Console.WriteLine("Je weet dat je moet onstnappen. de sleutel ligt waarschijnlijk in de kamer, maar waar?.");
             Console.WriteLine();
 
+            //De loop blijft draaien totdat Solved op true wordt gezet
             while (!Solved)
             {
                 Console.Write("Wat wil je onderzoeken? -> ");
@@ -42,6 +44,7 @@ namespace C_ConsoleGame
                         string readChoice = Console.ReadLine().ToLower().Trim();
                         Console.Clear();
 
+                        //Voorkom dat spelers oneindig insanity punten kunnen farmen
                         if (_readBook == true && readChoice == "ja")
                         {
                             Console.WriteLine("je wilt het niet nog een keer lezen");

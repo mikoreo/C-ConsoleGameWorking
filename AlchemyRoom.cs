@@ -14,10 +14,12 @@ namespace C_ConsoleGame
 
         protected override void PlayPuzzle()
         {
+            // Tijdelijke inventaris voor deze specifieke kamerpuzzel
             List<string> inventory = new List<string>();
            
             Console.WriteLine("Op een stoffig bureau voor je zit een briefje.");
 
+            //Bepaalt de tekstversie en hintkwaliteit op het briefje
             if (Insanity >= 2)
             {
                 Console.WriteLine("De letters dansen en lijken geschreven in vloeibaar vuur.");
@@ -38,7 +40,9 @@ namespace C_ConsoleGame
             Console.WriteLine("Je loopt door naar de grote alchemietafel achterin de kamer.");
             Console.WriteLine("Hier staan vijf potten met ingrediënten: VUURKRUID, ZWAVELPOEDER, ZUURWORTEL, NACHTSCHADE, en DRAKENBLOED.");
 
+            //Loop blijft draaien totdat de speler precies 3 items heeft verzameld
             while (inventory.Count < 3)
+                while (inventory.Count < 3)
             {
                 Console.WriteLine($"Jouw Inventory: [ {string.Join(", ", inventory)} ] ({inventory.Count}/3 items)");
                 Console.Write("Welk ingrediënt pak je op? -> ");
@@ -46,6 +50,7 @@ namespace C_ConsoleGame
 
                 if (item == "vuurkruid" || item == "zwavelpoeder" || item == "zuurwortel" || item == "nachtschade" || item == "drakenbloed")
                 {
+                    //Voorkom dat de speler duplicaten oppakt
                     if (inventory.Contains(item))
                     {
                         Console.WriteLine($"Je hebt {item.ToUpper()} al in je inventaris!");
@@ -98,6 +103,7 @@ namespace C_ConsoleGame
                 Console.WriteLine("Je mengt de drie stoffen, maar er gebeurt niks... Het wordt een soort mislukte grijze pap.");
                 Console.WriteLine("Je gooit de kolf gefrustreerd leeg. Je moet opnieuw beginnen!");
 
+                // Reset de inventaris en herstart de kamer
                 inventory.Clear();
                 PlayPuzzle();
             }

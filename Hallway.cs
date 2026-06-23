@@ -10,6 +10,7 @@ namespace C_ConsoleGame
 {
     internal class Hallway : Rooms
     {
+        //Om te kijken of de speler al een foute deur heeft gekozen
         private bool _wrongDoor = false;
         public Hallway() : base("Gang", "je loopt een stille verlaten gang binnen. het behang is aan het vervagen en valt op stukken van de muren af. je ziet 3 deuren voor je. Er kan maar 1 de goede zijn.")
         {
@@ -22,6 +23,7 @@ namespace C_ConsoleGame
                 Console.WriteLine("Je moet de juiste deur kiezen om verder te gaan. maar welke is de juiste");
                 Console.WriteLine();
 
+                //Bepaalt welke auditieve hints de speler hoort door insanity
                 if (Insanity == 1)
                 {
                     Console.WriteLine("je stapt verder de gang in en ineens hoor je geschreeuw uit kamer 1 komen");

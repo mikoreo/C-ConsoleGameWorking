@@ -25,6 +25,7 @@ namespace C_ConsoleGame
                 switch (readChoice)
                 {
                     case "schilderijen":
+                        //Bepaalt hoeveel valse codes en hallucinaties de speler te zien krijgt
                         if (Insanity == 2)
                         {
                             Console.WriteLine("je bekijkt de schilderijen. het eerste schilderij is een portret van een enge vrouw, ze staart je aan, of lijkt het maar zo. het derde schilderij is een landschap van een bos, het lijkt alsof er iemand achter een boom staat. het middelste schilderij is een schilderij van een gigantische octopus die een schip aanvalt, beweegt het water nou?");
