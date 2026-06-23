@@ -16,6 +16,7 @@ namespace C_ConsoleGame
             new StartRoom(),
             new Hallway(),
             new PortretRoom(),
+            new AlchemyRoom(),
         };
 
             Console.WriteLine("Welkom bij Escape the Mansion!");
